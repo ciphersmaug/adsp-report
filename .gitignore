@@ -3,4 +3,5 @@
 # But not these files
 !.gitignore
 !project.tex
-!*/.github/
+!/.github
+!/.github/
