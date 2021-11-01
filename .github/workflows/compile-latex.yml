@@ -1,5 +1,6 @@
 name: Build LaTeX document
-push:
+on:
+  push:
     branches: [ main, first ]
 jobs:
   build_latex:
