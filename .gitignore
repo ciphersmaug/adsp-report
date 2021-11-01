@@ -3,6 +3,8 @@
 # But not these files
 !.gitignore
 !project.tex
+!project.pdf
+!project.log
 !/.github
 !/.github/workflows
 !/.github/workflows/*
