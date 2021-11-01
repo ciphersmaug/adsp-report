@@ -13,6 +13,7 @@ jobs:
         with:
           root_file: project.tex
       - name: Commit report
+        uses: actions/checkout@v2
         run: |
           git config --global user.name 'ciphersmaug'
           git config --global user.email '39407479+ciphersmaug@users.noreply.github.com'
