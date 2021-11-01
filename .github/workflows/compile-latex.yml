@@ -12,9 +12,11 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: project.tex
-      - uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: |
-            project.pdf
-            project.log
+      - name: Commit report
+        run: |
+          git config --global user.name 'ciphersmaug'
+          git config --global user.email '39407479+ciphersmaug@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout "${GITHUB_REF:11}"
+          git commit -am "Automated report"
+          git push
